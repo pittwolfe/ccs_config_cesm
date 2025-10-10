@@ -475,6 +475,21 @@
     </queues>
   </batch_system>
 
+  <batch_system MACH="milan" type="slurm" >
+    <batch_submit>sbatch</batch_submit>
+    <submit_args>
+      <argument> --ntasks-per-node 96 </argument>
+      <argument> --time $JOB_WALLCLOCK_TIME </argument>
+      <argument> -p $JOB_QUEUE </argument>
+    </submit_args>
+    <queues>
+      <queue walltimemax="12:00:00" nodemin="1" nodemax="16" default="true">medium-96core</queue>
+      <queue walltimemax="48:00:00" nodemin="1" nodemax="6">long-96core</queue>
+      <queue walltimemax="04:00:00" nodemin="1" nodemax="4" >short-96core</queue>
+      <queue walltimemax="08:00:00" nodemin="1" nodemax="38">large-96core</queue>
+    </queues>
+  </batch_system>
+
   <!-- modex is PBS -->
   <batch_system MACH="modex" type="pbs">
     <directives>
