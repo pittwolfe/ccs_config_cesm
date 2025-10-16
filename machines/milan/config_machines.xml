@@ -8,10 +8,10 @@
     <MPILIBS>impi</MPILIBS>
     <PROJECT>carbon</PROJECT>
     <CIME_OUTPUT_ROOT>$ENV{HOME}/scratch/cesm/</CIME_OUTPUT_ROOT>
-    <DIN_LOC_ROOT>$ENV{HOME}/project/cesm/inputdata</DIN_LOC_ROOT>
-    <DIN_LOC_ROOT_CLMFORC>$ENV{HOME}/cesm/inputdata/atm/datm7</DIN_LOC_ROOT_CLMFORC>
-    <DOUT_S_ROOT>$ENV{HOME}/scratch/cesm/archive/$CASE</DOUT_S_ROOT>
-    <BASELINE_ROOT>$ENV{HOME}/project/cesm/cesm_baselines</BASELINE_ROOT>
+    <DIN_LOC_ROOT>/gpfs/projects/PittWolfeGroup/cesm/inputdata</DIN_LOC_ROOT>
+    <DIN_LOC_ROOT_CLMFORC>/gpfs/projects/PittWolfeGroup/cesm/inputdata/atm/datm7</DIN_LOC_ROOT_CLMFORC>
+    <DOUT_S_ROOT>/gpfs/projects/PittWolfeGroup/cesm/archive/$CASE</DOUT_S_ROOT>
+    <BASELINE_ROOT>/gpfs/projects/PittWolfeGroup/cesm/cesm_baselines</BASELINE_ROOT>
     <CCSM_CPRNC>$ENV{HOME}/project/carbon/intel-oneAPI-2024-milan/bin/cprnc</CCSM_CPRNC>
     <GMAKE>make</GMAKE>
     <GMAKE_J>8</GMAKE_J>
@@ -49,13 +49,15 @@
         <command name="load">mpi/latest</command>
         <command name="load">gcc/13.2.0</command>
         <command name="load">hdf5_18</command>
-        <command name="load">curl/8.14.1</command>        
+<!--        <command name="load">curl/8.14.1</command>        -->
       </modules>
     </module_system>
     <environment_variables>
       <env name="OMP_STACKSIZE">256M</env>
-      <env name="LD_LIBRARY_PATH">$ENV{HOME}/project/carbon/intel-oneAPI-2024-milan/lib:$ENV{LD_LIBRARY_PATH}</env>
-      <env name="HDF5_PLUGIN_PATH">$ENV{HOME}/project/carbon/intel-oneAPI-2024-milan/hdf5/lib/plugin</env>
+      <env name="LD_LIBRARY_PATH">$ENV{BASEDIR}/lib:$ENV{LD_LIBRARY_PATH}</env>
+      <env name="HDF5_PLUGIN_PATH">$ENV{BASEDIR}/hdf5/lib/plugin</env>
+      <env name="NETCDF_PATH">$ENV{BASEDIR}</env>
+      <env name="PNETCDF_PATH">$ENV{BASEDIR}</env>
     </environment_variables>
     <resource_limits>
       <resource name="RLIMIT_STACK">-1</resource>
