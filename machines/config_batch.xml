@@ -59,26 +59,24 @@
       <argument> --time $JOB_WALLCLOCK_TIME </argument>
       <argument>  -q $JOB_QUEUE </argument>
       <argument> --account $PROJECT </argument>
-      <argument> --export=ALL </argument>
     </submit_args>
-
     <directives queue="standard">
-      <directive>--partition=standard</directive>
-      <directive>--qos=standard</directive>
-      <directive>--cpus-per-task={{ thread_count }}</directive>
+      <directive> --partition=standard </directive>
+      <directive> --qos=standard </directive>
+      <directive> --cpus-per-task={{ thread_count }} </directive>
+      <directive> --export=ALL </directive>
     </directives>
-
     <directives queue="short">
-      <directive>--partition=standard</directive>
-      <directive>--qos=short</directive>
-      <directive>--cpus-per-task={{ thread_count }}</directive>
+      <directive> --partition=standard </directive>
+      <directive> --qos=short </directive>
+      <directive> --cpus-per-task={{ thread_count }} </directive>
+      <directive> --export=ALL </directive>
     </directives>
-
     <directives queue="serial">
-      <directive>--partition=serial</directive>
-      <directive>--qos=serial</directive>
+      <directive> --partition=serial </directive>
+      <directive> --qos=serial </directive>
+      <directive> --export=ALL </directive>
     </directives>
-
     <!-- following will need updating as system develops -->
     <queues>
       <queue walltimemax="24:00:00" nodemin="1" nodemax="1024" default="true">standard</queue>
