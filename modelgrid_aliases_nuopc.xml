@@ -609,6 +609,17 @@
     <mask>gx1v7</mask>
   </model_grid>
 
+  <model_grid alias="f09_sx066av1">
+    <grid name="atm">0.9x1.25</grid>
+    <grid name="lnd">0.9x1.25</grid>
+    <grid name="ocnice">sx066av1</grid>
+  </model_grid>
+
+  <model_grid alias="f09_sx066rv1">
+    <grid name="atm">0.9x1.25</grid>
+    <grid name="lnd">0.9x1.25</grid>
+    <grid name="ocnice">sx066rv1</grid>
+  </model_grid>
 
   <model_grid alias="f05_f05_mg17" not_compset="_POP" >
     <grid name="atm">0.47x0.63</grid>
