@@ -33,12 +33,13 @@
         <cmd_path lang="sh">module</cmd_path>
         <cmd_path lang="csh">module</cmd_path>
         
+        <modules>
+          <command name="purge"/>
+          <command name="use"> /work/n02/shared/CESM2/module</command>
+        </modules>
         <modules compiler="gnu">
-            <command name="load"> PrgEnv-gnu</command>
-            <command name="load"> cray-hdf5-parallel</command>
-            <command name="load"> cray-netcdf-hdf5parallel</command>
-            <command name="load"> cray-parallel-netcdf</command>
-            <command name="load"> cray-libsci</command>
+	  <command name="load"> load-epcc-module</command>
+  	  <command name="load"> CESM2/2.3.beta17</command>
         </modules>
         <modules mpilib="mpi-serial">
             <command name="rm"> cray-netcdf-hdf5parallel</command>
