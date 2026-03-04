@@ -404,6 +404,18 @@
     <desc>tripole v1 1-deg grid: testing proxy for high-res tripole ocean grids- do not use for scientific experiments</desc>
     <support>Experimental tripole ocean grid</support>
   </domain>
+    <domain name="sx066av1">
+      <nx>540</nx> <ny>466</ny>
+      <mesh>$DIN_LOC_ROOT/share/meshes/ESMF_mesh_sx0.66av1.nc</mesh>
+      <desc>A simple 0.66 degree aqua mesh version 1 (tx0.66v1) generated with mom6_bathy.py by Youwei Ma</desc>
+      <support>Experimental for MOM6 ICCM experiments</support>
+    </domain>
+    <domain name="sx066rv1">
+      <nx>540</nx> <ny>466</ny>
+      <mesh>$DIN_LOC_ROOT/share/meshes/ESMF_mesh_sx0.66rv1.nc</mesh>
+      <desc>A simple 0.66 degree aqua mesh version 1 (tx0.66v1) generated with mom6_bath.py by Youwei Ma</desc>
+     <support>Experimental for MOM6 ICCM experiments</support>
+    </domain>
     <domain name="oQU480">
       <nx>1813</nx>  <ny>1</ny>
       <mesh driver="nuopc">$DIN_LOC_ROOT/ocn/mpas-o/oQU480/oQU480_ESMFmesh.250721.nc</mesh>

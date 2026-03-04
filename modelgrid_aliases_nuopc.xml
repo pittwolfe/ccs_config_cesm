@@ -416,12 +416,24 @@
     <grid name="glc">gris4</grid>
   </model_grid>
 
-    <model_grid alias="f09_t232_ais8gris4">
+   <model_grid alias="f09_t232_ais8gris4">
     <grid name="atm">0.9x1.25</grid>
     <grid name="lnd">0.9x1.25</grid>
     <grid name="ocnice">tx2_3v2</grid>
     <grid name="glc">ais8:gris4</grid>
   </model_grid>
+
+   <model_grid alias="f09_sx066av1">
+    <grid name="atm">0.9x1.25</grid>
+    <grid name="lnd">0.9x1.25</grid>
+    <grid name="ocnice">sx066av1</grid>
+   </model_grid>
+
+   <model_grid alias="f09_sx066rv1">
+    <grid name="atm">0.9x1.25</grid>
+    <grid name="lnd">0.9x1.25</grid>
+    <grid name="ocnice">sx066rv1</grid>
+   </model_grid>
 
   <!-- EarthWorks Specific, MPAS-O+ROF -->
   <model_grid alias="T62_oQU480" not_compset="_CAM">
