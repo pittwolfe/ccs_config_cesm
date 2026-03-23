@@ -2,7 +2,10 @@
     <DESC>
     CrayAMD EPYC Zen2, 128 pes/node, batch system is SLURM
     </DESC>
+    <!-- For some reason, I thought Archer2 runs CNL, but it actually runs SUSE Linux 
     <OS>CNL</OS>
+    -->
+    <OS>LINUX</OS>
     <COMPILERS>gnu,cray</COMPILERS>
     <MPILIBS>mpich,mpi-serial</MPILIBS>
     <PROJECT>none</PROJECT>
