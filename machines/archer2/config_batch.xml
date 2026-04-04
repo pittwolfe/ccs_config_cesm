@@ -12,12 +12,21 @@
       <directive>--partition=standard</directive>
       <directive>--qos=standard</directive>
       <directive>--cpus-per-task={{ thread_count }}</directive>
+      <!-- Not needed on archer 2 <directive>\-\-exclusive</directive> -->
     </directives>
   
+    <directives queue="long">
+      <directive>--partition=standard</directive>
+      <directive>--qos=standard</directive>
+      <directive>--cpus-per-task={{ thread_count }}</directive>
+      <!-- Not needed on archer 2 <directive>\-\-exclusive</directive> -->
+    </directives>
+
     <directives queue="short">
       <directive>--partition=standard</directive>
       <directive>--qos=short</directive>
       <directive>--cpus-per-task={{ thread_count }}</directive>
+      <!-- Not needed on archer 2 <directive>\-\-exclusive</directive> -->
     </directives>
       
     <directives queue="serial">
@@ -28,9 +37,9 @@
     <!-- following will need updating as system develops -->
     <queues>
       <queue walltimemax="24:00:00" nodemin="1" nodemax="1024" default="true">standard</queue>
-      <!-- <queue walltimemin="24:00:00" walltimemax="48:00:00" nodemin="1" nodemax="64" >long</queue> -->
+      <queue walltimemin="24:00:00" walltimemax="48:00:00" nodemin="1" nodemax="64" >long</queue>
       <queue walltimemax="00:20:00" nodemin="1" nodemax="32">short</queue>
-      <queue walltimemax="24:00:00" nodemin="1" nodemax="1">serial</queue>
+      <queue walltimemax="24:00:00" jobmax="32" nodemax="1">serial</queue>
     </queues>
   </batch_system>
 
